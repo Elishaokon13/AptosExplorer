@@ -4,7 +4,7 @@ import {Types} from "aptos";
 import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import {CodeLineBox} from "../../../../components/CodeLineBox";
-import {Link} from "../../../../components/router-link";
+import {Link} from "../../../../routing";
 import {codeBlockColorClickable} from "../../../../themes/colors/aptosColorPalette";
 
 function CoinTransferCodeLine({sx}: {sx?: SxProps<Theme>}): JSX.Element {

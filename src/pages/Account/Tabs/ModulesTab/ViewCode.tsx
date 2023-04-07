@@ -34,8 +34,8 @@ import {
 import {getBytecodeSizeInKB, transformCode} from "../../../../utils";
 
 import JsonViewCard from "../../../../components/IndividualPageContent/JsonViewCard";
-import {useNavigate, useParams, useSearchParams} from "react-router-dom";
-import {Link} from "../../../../components/router-link";
+import {useParams, useSearchParams} from "react-router-dom";
+import {Link, useNavigate} from "../../../../routing";
 
 type PackageMetadata = {
   name: string;

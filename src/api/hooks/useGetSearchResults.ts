@@ -6,7 +6,7 @@ import {
   getTransaction,
 } from "../../api";
 import {GTMEvents} from "../../dataConstants";
-import {useGlobalState} from "../../GlobalState";
+import {useGlobalState} from "../../global-config/GlobalConfig";
 import {
   isNumeric,
   isValidAccountAddress,
