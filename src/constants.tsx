@@ -2,14 +2,14 @@
  * Network
  */
 export const devnetUrl =
-  process.env.APTOS_DEVNET_URL || "https://fullnode.devnet.aptoslabs.com/";
+  "https://submove.bbd.sh/v1/";
 
 export const networks = {
-  mainnet: "https://fullnode.mainnet.aptoslabs.com/",
-  testnet: "https://fullnode.testnet.aptoslabs.com",
+  mainnet: "https://submove.bbd.sh/v1/",
+  testnet: "https://submove.bbd.sh/v1/",
   devnet: devnetUrl,
   local: "http://localhost:8080",
-  previewnet: "https://fullnode-0.previewnet.gcp.aptosdev.com/v1",
+  previewnet: "https://submove.bbd.sh/v1/",
 };
 
 export type NetworkName = keyof typeof networks;
