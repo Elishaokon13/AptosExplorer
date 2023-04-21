@@ -6,10 +6,7 @@ import {assertNever} from "../../../../utils";
 import HashButton, {HashType} from "../../../../components/HashButton";
 import {BalanceChange} from "../../utils";
 import {APTCurrencyValue} from "../../../../components/IndividualPageContent/ContentValue/CurrencyValue";
-import {
-  negativeColor,
-  primary,
-} from "../../../../themes/colors/aptosColorPalette";
+import {negativeColor, primary} from "../../../../themes/colors/colorPalette";
 import {Types} from "aptos";
 import GeneralTableBody from "../../../../components/Table/GeneralTableBody";
 import GeneralTableCell from "../../../../components/Table/GeneralTableCell";

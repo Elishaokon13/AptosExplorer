@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {Box, BoxProps, useTheme} from "@mui/material";
-import {grey} from "../themes/colors/aptosColorPalette";
-import {StyleContext} from "../pages/Analytics/NetworkInfo/NetworkInfo";
+import {grey} from "../themes/colors/colorPalette";
+import {StyleContext} from "../pages/LandingPage/NetworkInfo/NetworkInfo";
 
 interface CardProps extends BoxProps {
   children: React.ReactNode;

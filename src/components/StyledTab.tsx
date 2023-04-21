@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Tab, TabProps, useTheme} from "@mui/material";
-import {grey} from "../themes/colors/aptosColorPalette";
+import {grey} from "../themes/colors/colorPalette";
 
 interface StyledTabProps extends TabProps {
   isFirst: boolean;

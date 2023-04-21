@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React, {useContext, useEffect, useState} from "react";
 import TimestampValue from "../../components/IndividualPageContent/ContentValue/TimestampValue";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import {getStakeOperationAPTRequirement} from "./utils";
 import StyledDialog from "../../components/StyledDialog";
 import {StyledLearnMoreTooltip} from "../../components/StyledTooltip";
@@ -233,7 +233,7 @@ export default function StakeOperationDialog({
       <DialogContent sx={{textAlign: "center"}}>
         <Typography variant="caption" color={grey[450]}>
           <div>
-            Please do your own research. Aptos Labs is not responsible for the
+            Please do your own research. MVMT is not responsible for the
             performance of the validator nodes displayed here, or the security
             of your funds
           </div>
@@ -294,7 +294,7 @@ export default function StakeOperationDialog({
       <DialogContent sx={{textAlign: "center"}}>
         <Typography variant="caption" color={grey[450]}>
           <div>
-            Please do your own research. Aptos Labs is not responsible for the
+            Please do your own research. MVMT is not responsible for the
             security of your funds
           </div>
         </Typography>
@@ -344,7 +344,7 @@ export default function StakeOperationDialog({
       <DialogContent sx={{textAlign: "center"}}>
         <Typography variant="caption" color={grey[450]}>
           <div>
-            Please do your own research. Aptos Labs is not responsible for the
+            Please do your own research. MVMT is not responsible for the
             security of your funds
           </div>
         </Typography>

@@ -27,7 +27,7 @@ export const primary = {
   900: "#06565b",
 };
 
-export const aptosColor = primary[600];
+export const brandColor = primary[600];
 export const negativeColor: string = "#F97373";
 export const warningColor: string = "#f1c232";
 

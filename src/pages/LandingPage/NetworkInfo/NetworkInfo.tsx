@@ -5,30 +5,10 @@ import TotalStake from "./TotalStake";
 import TPS from "./TPS";
 import ActiveValidators from "./ActiveValidators";
 import TotalTransactions from "./TotalTransactions";
-import {Link} from "@mui/material";
-import {useGetInMainnet} from "../../../api/hooks/useGetInMainnet";
 
 type CardStyle = "default" | "outline";
 
 export const StyleContext = createContext<CardStyle>("default");
-
-function LinkableContainer({
-  linkToAnalyticsPage,
-  children,
-}: {
-  linkToAnalyticsPage: boolean;
-  children: React.ReactNode;
-}) {
-  const inMainnet = useGetInMainnet();
-
-  return inMainnet && linkToAnalyticsPage ? (
-    <Link href="/analytics" underline="none" color="inherit" variant="inherit">
-      {children}
-    </Link>
-  ) : (
-    <>{children}</>
-  );
-}
 
 type NetworkInfoProps = {
   isOnHomePage?: boolean;
@@ -51,24 +31,16 @@ export default function NetworkInfo({isOnHomePage}: NetworkInfoProps) {
           </Grid>
         )}
         <Grid item xs={12} md={6} lg={3}>
-          <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <TotalSupply />
-          </LinkableContainer>
+          <TotalSupply />
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
-          <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <TotalStake />
-          </LinkableContainer>
+          <TotalStake />
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
-          <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <TPS />
-          </LinkableContainer>
+          <TPS />
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
-          <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <ActiveValidators />
-          </LinkableContainer>
+          <ActiveValidators />
         </Grid>
       </Grid>
     </StyleContext.Provider>

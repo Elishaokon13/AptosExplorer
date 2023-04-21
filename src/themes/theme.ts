@@ -7,7 +7,7 @@ import {
   negativeColor,
   primary,
   warningColor,
-} from "./colors/aptosColorPalette";
+} from "./colors/colorPalette";
 
 // Button variants
 declare module "@mui/material/Button" {

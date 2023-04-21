@@ -10,7 +10,7 @@ import {
   Link,
 } from "@mui/material";
 import * as RRD from "react-router-dom";
-import {grey} from "../themes/colors/aptosColorPalette";
+import {grey} from "../themes/colors/colorPalette";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import {truncateAddress, truncateAddressMiddle} from "../pages/utils";

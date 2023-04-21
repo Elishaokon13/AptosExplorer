@@ -1,6 +1,6 @@
 import {Typography, TypographyProps} from "@mui/material";
 import React from "react";
-import {grey} from "../../../../themes/colors/aptosColorPalette";
+import {grey} from "../../../../themes/colors/colorPalette";
 import {fontSizeBody, fontSizeBodySmall} from "../../constants";
 
 interface BodyProps extends TypographyProps {

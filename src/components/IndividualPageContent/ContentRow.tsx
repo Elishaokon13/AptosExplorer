@@ -1,7 +1,7 @@
 import React from "react";
 import {Box} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import EmptyValue from "./ContentValue/EmptyValue";
 
 type ContentRowProps = {

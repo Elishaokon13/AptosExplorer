@@ -1,5 +1,5 @@
 import React from "react";
-import {grey} from "../../../themes/colors/aptosColorPalette";
+import {grey} from "../../../themes/colors/colorPalette";
 import {APTCurrencyValue} from "./CurrencyValue";
 import GasValue from "./GasValue";
 

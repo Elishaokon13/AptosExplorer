@@ -19,16 +19,6 @@ export type AnalyticsData = {
   }[];
 };
 
-export type DailyAnalyticsData =
-  | DailyActiveUserData
-  | DailyAvgGasData
-  | DailyGasCostData
-  | DailyContractDeployerData
-  | DailyContractData
-  | DailyPeakTPSData
-  | DailyNewAccountData
-  | DailyUserTxnData;
-
 export type DailyActiveUserData = {
   daily_active_user_count: number;
   date: string;
@@ -68,26 +58,3 @@ export type DailyUserTxnData = {
   num_user_transactions: number;
   date: string;
 };
-
-export function useGetAnalyticsData() {
-  const [state, _] = useGlobalState();
-  const [data, setData] = useState<AnalyticsData>();
-
-  useEffect(() => {
-    if (state.network_name === defaultNetworkName) {
-      const fetchData = async () => {
-        const response = await fetch(ANALYTICS_DATA_URL);
-        const data = await response.json();
-        setData(data);
-      };
-
-      fetchData().catch((error) => {
-        console.error("ERROR!", error, typeof error);
-      });
-    } else {
-      setData(undefined);
-    }
-  }, [state]);
-
-  return data;
-}

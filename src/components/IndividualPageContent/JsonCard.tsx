@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import EmptyValue from "./ContentValue/EmptyValue";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import StyledTooltip from "../StyledTooltip";
-import {codeBlockColor} from "../../themes/colors/aptosColorPalette";
+import {codeBlockColor} from "../../themes/colors/colorPalette";
 
 const TEXT_COLOR_LIGHT = "#0EA5E9";
 const TEXT_COLOR_DARK = "#83CCED";

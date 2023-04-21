@@ -8,10 +8,6 @@ function getFetchNameUrl(
   address: string,
   isPrimary: boolean,
 ) {
-  if (network !== "testnet" && network !== "mainnet") {
-    return undefined;
-  }
-
   return isPrimary
     ? `https://www.aptosnames.com/api/${network}/v1/primary-name/${address}`
     : `https://www.aptosnames.com/api/${network}/v1/name/${address}`;
@@ -23,35 +19,25 @@ export function useGetNameFromAddress(address: string) {
 
   useEffect(() => {
     const primaryNameUrl = getFetchNameUrl(state.network_name, address, true);
-    if (primaryNameUrl !== undefined) {
-      const fetchData = async () => {
-        const {name: primaryName} = await fetchJsonResponse(primaryNameUrl);
+    const fetchData = async () => {
+      const {name: primaryName} = await fetchJsonResponse(primaryNameUrl);
 
-        if (primaryName) {
-          setName(primaryName);
-        } else {
-          const nameUrl =
-            getFetchNameUrl(state.network_name, address, false) ?? "";
-          const {name} = await fetchJsonResponse(nameUrl);
-          setName(name);
-        }
-      };
+      if (primaryName) {
+        setName(primaryName);
+      } else {
+        const nameUrl =
+          getFetchNameUrl(state.network_name, address, false) ?? "";
+        const {name} = await fetchJsonResponse(nameUrl);
+        setName(name);
+      }
+    };
 
-      fetchData().catch((error) => {
-        console.error("ERROR!", error, typeof error);
-      });
-    }
+    fetchData().catch((error) => {
+      console.error("ERROR!", error, typeof error);
+    });
   }, [address, state]);
 
   return name;
-}
-
-function getFetchAddressUrl(network: NetworkName, name: string) {
-  if (network !== "testnet" && network !== "mainnet") {
-    return undefined;
-  }
-
-  return `https://www.aptosnames.com/api/${network}/v1/address/${name}`;
 }
 
 export async function getAddressFromName(
@@ -59,12 +45,9 @@ export async function getAddressFromName(
   network: NetworkName,
 ): Promise<{address: string | undefined; primaryName: string | undefined}> {
   const searchableName = truncateAptSuffix(name);
-  const addressUrl = getFetchAddressUrl(network, searchableName);
+  const addressUrl = `https://www.aptosnames.com/api/${network}/v1/address/${searchableName}`;
 
   const notFoundResult = {address: undefined, primaryName: undefined};
-  if (addressUrl === undefined) {
-    return notFoundResult;
-  }
 
   try {
     const {address} = await fetchJsonResponse(addressUrl);
