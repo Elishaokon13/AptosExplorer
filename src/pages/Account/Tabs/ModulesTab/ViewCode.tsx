@@ -30,7 +30,7 @@ import {
   codeBlockColorRgbDark,
   codeBlockColorRgbLight,
   grey,
-} from "../../../../themes/colors/aptosColorPalette";
+} from "../../../../themes/colors/colorPalette";
 import {getBytecodeSizeInKB, transformCode} from "../../../../utils";
 
 import JsonViewCard from "../../../../components/IndividualPageContent/JsonViewCard";

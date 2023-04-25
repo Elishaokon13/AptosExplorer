@@ -13,7 +13,7 @@ import {
 import React, {useState} from "react";
 import StyledDialog from "../../components/StyledDialog";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import {StakeOperation} from "../../api/hooks/useSubmitStakeOperation";
 
 type TransactionSucceededDialogProps = {

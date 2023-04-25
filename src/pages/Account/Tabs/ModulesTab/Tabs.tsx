@@ -3,7 +3,7 @@ import React from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import StyledTab from "../../../../components/StyledTab";
 import StyledTabs from "../../../../components/StyledTabs";
-import {grey} from "../../../../themes/colors/aptosColorPalette";
+import {grey} from "../../../../themes/colors/colorPalette";
 import {assertNever} from "../../../../utils";
 import ViewCode from "./ViewCode";
 import WriteContract from "./WriteContract";

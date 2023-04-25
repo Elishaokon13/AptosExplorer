@@ -12,11 +12,11 @@ import MenuItem from "@mui/material/MenuItem";
 import SvgIcon, {SvgIconProps} from "@mui/material/SvgIcon";
 import Box from "@mui/material/Box";
 import {useSearchParams} from "react-router-dom";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import {Stack} from "@mui/system";
 import {
-  useGetChainIdCached,
   useGetChainIdAndCache,
+  useGetChainIdCached,
 } from "../../api/hooks/useGetNetworkChainIds";
 import {AptosClient} from "aptos";
 
@@ -170,15 +170,12 @@ export default function NetworkSelect() {
               <Typography variant="body2">Chain ID</Typography>
             </Stack>
           </MenuItem>
-          {Object.keys(networks).map((networkName: string) => (
-            <MenuItem
-              key={networkName}
-              value={networkName}
-              sx={{paddingY: 0, textTransform: "capitalize"}}
-            >
-              <NetworkMenuItem networkName={networkName} />
-            </MenuItem>
-          ))}
+          <MenuItem
+            value="devnet"
+            sx={{paddingY: 0, textTransform: "capitalize"}}
+          >
+            <NetworkMenuItem networkName="devnet" />
+          </MenuItem>
         </Select>
       </FormControl>
     </Box>

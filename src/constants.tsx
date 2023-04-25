@@ -1,42 +1,22 @@
 /**
  * Network
  */
-export const devnetUrl =
-  "https://submove.bbd.sh/v1/";
 
 export const networks = {
-  mainnet: "https://submove.bbd.sh/v1/",
-  testnet: "https://submove.bbd.sh/v1/",
-  devnet: devnetUrl,
+  mainnet: "https://submove.bbd.sh/v1",
+  testnet: "https://submove.bbd.sh/v1",
+  devnet: "https://submove.bbd.sh/v1",
   local: "http://localhost:8080",
-  previewnet: "https://submove.bbd.sh/v1/",
+  previewnet: "https://submove.bbd.sh/v1",
 };
 
-export type NetworkName = keyof typeof networks;
+export type NetworkName = "devnet";
 
-export enum Network {
-  MAINNET = "mainnet",
-  TESTNET = "testnet",
-  DEVNET = "devnet",
-  LOCAL = "local",
-  PREVIEWNET = "previewnet",
-}
-
-// Remove trailing slashes
-for (const key of Object.keys(networks)) {
-  const networkName = key as NetworkName;
-  if (networks[networkName].endsWith("/")) {
-    networks[networkName] = networks[networkName].slice(0, -1);
-  }
-}
-
-export const defaultNetworkName: NetworkName = "mainnet" as const;
+export const defaultNetworkName: NetworkName = "devnet" as const;
 
 if (!(defaultNetworkName in networks)) {
   throw `defaultNetworkName '${defaultNetworkName}' not in Networks!`;
 }
-
-export const defaultNetwork = networks[defaultNetworkName];
 
 /**
  * Feature
@@ -63,13 +43,7 @@ if (!(defaultFeatureName in features)) {
   throw `defaultFeatureName '${defaultFeatureName}' not in Features!`;
 }
 
-export const defaultFeature = features[defaultFeatureName];
-
 /**
  * Delegation Service
  */
 export const OCTA = 100000000;
-export const WHILTELISTED_TESTNET_DELEGATION_NODES = process.env
-  .REACT_APP_WHILTELISTED_TESTNET_DELEGATION_NODES
-  ? process.env.REACT_APP_WHILTELISTED_TESTNET_DELEGATION_NODES.split(",")
-  : null;

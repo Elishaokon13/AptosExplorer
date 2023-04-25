@@ -1,12 +1,11 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloProvider,
   HttpLink,
+  InMemoryCache,
   NormalizedCacheObject,
 } from "@apollo/client";
-import {useEffect, useState} from "react";
 import {NetworkName} from "../../constants";
 import {useGlobalState} from "../../GlobalState";
 
@@ -17,14 +16,8 @@ function getIsGraphqlClientSupportedFor(networkName: NetworkName): boolean {
 
 function getGraphqlURI(networkName: NetworkName): string | undefined {
   switch (networkName) {
-    case "mainnet":
-      return process.env.REACT_APP_INDEXER_GRAPHQL_MAINNET;
-    case "testnet":
-      return process.env.REACT_APP_INDEXER_GRAPHQL_TESTNET;
     case "devnet":
       return process.env.REACT_APP_INDEXER_GRAPHQL_DEVNET;
-    case "local":
-      return undefined;
     default:
       return undefined;
   }

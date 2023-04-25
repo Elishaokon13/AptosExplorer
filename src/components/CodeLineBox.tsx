@@ -1,6 +1,6 @@
 import React from "react";
 import {Box, SxProps, Theme, useTheme} from "@mui/material";
-import {codeBlockColor} from "../themes/colors/aptosColorPalette";
+import {codeBlockColor} from "../themes/colors/colorPalette";
 
 const TEXT_COLOR_LIGHT = "#0EA5E9";
 const TEXT_COLOR_DARK = "#83CCED";

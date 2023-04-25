@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import * as React from "react";
 import SideDrawer from "../../components/SideDrawer";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import {REWARDS_LEARN_MORE_LINK} from "./Components/Staking";
 
 type StakingDrawerProps = {
@@ -194,10 +194,9 @@ const faqValidatorData = [
         1M APT. Only active validators will earn rewards.
         <br />
         <br />
-        However, please do your own research, Aptos labs is not responsible for
-        the veracity of the information displayed, nor responsible for the
-        security of your funds, past or future performance of the validator
-        node.
+        However, please do your own research, MVMT is not responsible for the
+        veracity of the information displayed, nor responsible for the security
+        of your funds, past or future performance of the validator node.
       </React.Fragment>
     ),
   },

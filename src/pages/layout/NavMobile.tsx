@@ -5,18 +5,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import {ReactComponent as HamburgerIcon} from "../../assets/svg/icon_hamburger.svg";
 import {ReactComponent as CloseIcon} from "../../assets/svg/icon_close.svg";
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 import Box from "@mui/material/Box";
 import {useTheme} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import {useGetInMainnet} from "../../api/hooks/useGetInMainnet";
 
 export default function NavMobile() {
   const [menuAnchorEl, setMenuAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const navigate = useNavigate();
-
-  const inMainnet = useGetInMainnet();
 
   const menuOpen = Boolean(menuAnchorEl);
 
@@ -76,11 +73,6 @@ export default function NavMobile() {
         <MenuItem onClick={() => handleCloseAndNavigate("/transactions")}>
           Transactions
         </MenuItem>
-        {inMainnet && (
-          <MenuItem onClick={() => handleCloseAndNavigate("/analytics")}>
-            Analytics
-          </MenuItem>
-        )}
         <MenuItem onClick={() => handleCloseAndNavigate("/validators")}>
           Validators
         </MenuItem>

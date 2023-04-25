@@ -1,4 +1,4 @@
-import {grey} from "../../themes/colors/aptosColorPalette";
+import {grey} from "../../themes/colors/colorPalette";
 
 /* validator page -> my deposits section -> status column -> tooltip content & color scheme */
 
@@ -30,10 +30,6 @@ export const WITHDRAW_READY_BACKGROUND_COLOR_DARK = "rgba(20, 184, 166, 0.1)";
 export const WITHDRAW_READY_LABEL = "Withdraw ready";
 export const WITHDRAW_READY_DESCRIPTION =
   "After the end of the lock period you will be able to withdraw your funds to your wallet.";
-
-// step icon color scheme
-export const STEP_ICON_DARK = "#818CF8";
-export const STEP_ICON_LIGHT = grey[300];
 
 /**
  * In theory, minimum is 10 APT, but this 10 APT doesn't include the initial add_stake fee.
