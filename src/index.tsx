@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import {QueryClient, QueryClientProvider} from "react-query";
 import ExplorerRoutes from "./ExplorerRoutes";
@@ -18,6 +17,7 @@ import {BrowserTracing} from "@sentry/tracing";
 import ReactGA from "react-ga4";
 import {initGTM} from "./api/hooks/useGoogleTagManager";
 import {GTMEvents} from "./dataConstants";
+import {createRoot} from "react-dom/client";
 
 initGTM({
   events: {
@@ -67,7 +67,11 @@ const wallets = [
   new SpikaWallet(),
 ];
 
-ReactDOM.render(
+const container = document.getElementById("root");
+
+const root = createRoot(container!);
+
+root.render(
   <React.StrictMode>
     <StatsigProvider
       sdkKey={
@@ -89,5 +93,4 @@ ReactDOM.render(
       </QueryClientProvider>
     </StatsigProvider>
   </React.StrictMode>,
-  document.getElementById("root"),
 );
